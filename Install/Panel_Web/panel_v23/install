@@ -34,7 +34,7 @@ apt-get install phpmyadmin -y
 php5enmod mcrypt 
 systemctl restart apache2 
 ln -s /usr/share/phpmyadmin /var/www/html/phpmyadmin
-apt-get install libssh2-1-dev libssh2-php -y 
+apt-get install php-dev php-ssh2 -y 
 if [ "$(php -m |grep ssh2)" = "ssh2" ]; then
   true
 else
